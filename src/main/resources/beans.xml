@@ -14,15 +14,15 @@
 
     <bean id="contact"
           name="contact"
-          class="com.jspiders.springs.demo.ContactInfo"/>
+          class="com.jspiders.springs.demo.model.ContactInfo"/>
 
     <bean id="address"
           name="address"
-          class="com.jspiders.springs.demo.Address"/>
+          class="com.jspiders.springs.demo.model.Address"/>
 
     <bean id = "employee"
           name="employee"
-          class="com.jspiders.springs.demo.Employee">
+          class="com.jspiders.springs.demo.model.Employee">
 
         <constructor-arg ref="contact"/>
 

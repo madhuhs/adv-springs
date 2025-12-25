@@ -1,5 +1,6 @@
 package com.jspiders.springs.demo;
 
+import com.jspiders.springs.demo.model.Employee;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DependencyInjectionDemo

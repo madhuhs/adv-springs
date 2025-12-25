@@ -1,5 +1,8 @@
 package com.jspiders.springs.demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Sample {
     private int x1 = 0;
     public void increment()

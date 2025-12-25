@@ -1,8 +1,8 @@
-package com.jspiders.springs.demo;
+package com.jspiders.springs.demo.model;
 
 import org.springframework.stereotype.Component;
 
-
+@Component
 public class ContactInfo
 {
    private String email;

@@ -1,20 +1,22 @@
-package com.jspiders.springs.demo;
+package com.jspiders.springs.demo.model;
 
+import com.jspiders.springs.demo.model.Address;
+import com.jspiders.springs.demo.model.ContactInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component//<bean>
 public class Employee
 {
    private int id;
    private String name;
    private double salary;
    private ContactInfo contact;
-
    private Address address;
 
    //Injecting dependency in Constructor
-   public Employee(ContactInfo contact)
+    @Autowired
+    public Employee(ContactInfo contact)
    {
        this.contact = contact;
    }
@@ -55,6 +57,7 @@ public class Employee
         return address;
     }
 
+    @Autowired
     public void setAddress(Address address) {
         this.address = address;
     }
