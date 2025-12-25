@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions -->
+
+    <bean id="Sample"
+          name="Sample"
+          class="com.jspiders.springs.demo.Sample"
+          scope="prototype"
+    />
+
+    <bean id="contact"
+          name="contact"
+          class="com.jspiders.springs.demo.ContactInfo"/>
+
+    <bean id="address"
+          name="address"
+          class="com.jspiders.springs.demo.Address"/>
+
+    <bean id = "employee"
+          name="employee"
+          class="com.jspiders.springs.demo.Employee">
+
+        <constructor-arg ref="contact"/>
+
+        <property name="id" value="100"/>
+        <property name="name" value="Employee-1"/>
+        <property name="salary" value="1000"/>
+
+        <property name="address" ref="address"/>
+    </bean>
+
+    <bean id="lifecycle"
+          name="lifecycle"
+          class="com.jspiders.springs.demo.LifeCycleDemo"/>
+
+</beans>
